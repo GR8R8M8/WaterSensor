@@ -1,0 +1,52 @@
+This water sensor is meant for the NodeMCU, and requires the Thingspeak library and the ESP8266 library, along with the NodeMCU added to your board manager.
+
+--------
+
+Parts:
+
+1. NodeMCU (https://goo.gl/t6S5Kb)
+2. RGB LED (https://goo.gl/J7y9jZ)
+3. Soil Water Sensor (https://goo.gl/ZM8ECY)
+
+----------
+
+Wiring:
+
+1. Connect the blue wire of the water sensor to the A0 pin
+2. Connect the black wire of the water sensor to the GND pin
+3. Connect the red wire to the 3v3 pin
+4. Connect the green pin of the RGB LED to D0
+5. Connect the red pin of the RGB LED to D1
+6. Connect the ground pin of the RGB LED to GND
+
+
+----------
+
+Dependancy Installation:
+
+Installing The NodeMCU into the board manager:
+(File > Preferences > Paste "https://github.com/esp8266/Arduino/releases/download/2.1.0/package_esp8266com_index.json")
+then go to
+(Tools > Board > Board Manager > Type in "NodeMCU" > Click Install)
+
+Installing the ESP8266 Library:
+(Sketch > Include Library > Manage Libraries > Type in "ESP8266" > Click Install)
+
+Installing the Thingspeak library:
+(Sketch > Include Library > Manage Libraries > Type in "Thingspeak" > Click Install)
+
+----------
+
+Setup:
+
+1. Change waterThreshold value to a value that fits your application 
+    Water threshold values for the DFROBOT sensor I am using are as follows:
+      0-300       Dry Soil
+      300-700     Damp Soil
+      700-950     In Water
+
+2. Change the SSID and password to your WiFi network's 
+3. Change the Thingspeak channel number and API key to your own
+4. Click upload
+
+----------
