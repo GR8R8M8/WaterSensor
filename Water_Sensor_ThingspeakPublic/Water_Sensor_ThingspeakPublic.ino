@@ -15,8 +15,8 @@ int status = WL_IDLE_STATUS;
 WiFiClient  client;
 
 //Thingspeak Setup
-unsigned long myChannelNumber = 123456;
-const char * myWriteAPIKey = "apikey";
+unsigned long myChannelNumber = 12345; // Replace with your channel number
+const char * myWriteAPIKey = "apikey"; // Replace with your API key
 
 //Startup Code
 void setup() {
